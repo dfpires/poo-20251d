@@ -1,3 +1,5 @@
+import javax.swing.*;
+
 public class Carro {
     // variáveis são fortemente tipadas
     // int é um tipo primitivo de dados
@@ -25,6 +27,14 @@ public class Carro {
                 "\nAno: " + this.ano +
                 "\nVelocidade: " + this.velocidade +
                 "\n ###################################");
+    }
+    public void exibeDetalhes2(){
+        // this representa o objeto que chama o método
+        JOptionPane.showMessageDialog(null,
+                "Marca: " + this.marca +
+                "\nModelo: " + this.modelo +
+                "\nAno: " + this.ano +
+                "\nVelocidade: " + this.velocidade );
     }
     // acelerar o carro
     // x representa o quanto vai acelerar
