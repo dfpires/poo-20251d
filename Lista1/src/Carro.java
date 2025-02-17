@@ -1,7 +1,8 @@
 public class Carro {
     // variáveis são fortemente tipadas
     // int é um tipo primitivo de dados
-    public int ano, velocidade;
+    public int ano;
+    public float velocidade;
     // String é um tipo de dados do tipo classe
     public String marca, modelo;
 
@@ -25,5 +26,11 @@ public class Carro {
                 "\nVelocidade: " + this.velocidade +
                 "\n ###################################");
     }
+    // acelerar o carro
+    // x representa o quanto vai acelerar
+    public void acelerar(float x){
+        this.velocidade += x;
+    }
+    // frear o carro
 
 }
