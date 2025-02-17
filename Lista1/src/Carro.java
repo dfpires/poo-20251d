@@ -32,5 +32,12 @@ public class Carro {
         this.velocidade += x;
     }
     // frear o carro
-
+    public void frear(float x){
+        if (this.velocidade >=  x) {
+            this.velocidade -= x;
+        }
+        else {
+            System.out.println("Impossível frear");
+        }
+    }
 }
