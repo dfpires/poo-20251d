@@ -12,7 +12,7 @@ public class MainAluno {
         obj1.nome = JOptionPane.showInputDialog("Nome");
         obj1.dadosAluno();
 
-      //  Aluno obj2 = new Aluno(19, 123, 6, 8.5f, "Fulano");
-      //  obj2.dadosAluno();
+        Aluno obj2 = new Aluno(19, 123, 6, 8.5f, "Fulano");
+        obj2.dadosAluno();
     }
 }
