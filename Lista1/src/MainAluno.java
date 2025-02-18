@@ -11,8 +11,10 @@ public class MainAluno {
         obj1.p2 = Float.parseFloat(JOptionPane.showInputDialog("P2"));
         obj1.nome = JOptionPane.showInputDialog("Nome");
         obj1.dadosAluno();
+        System.out.println(obj1.nome + " " + obj1.passou());
 
         Aluno obj2 = new Aluno(19, 123, 6, 8.5f, "Fulano");
         obj2.dadosAluno();
+        System.out.println(obj2.nome + " " + obj2.passou());
     }
 }
