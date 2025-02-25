@@ -13,4 +13,15 @@ public class Cliente {
         this.nome = nome;
         this.saldo = saldo;
     }
+    public void depositar(float valor) {
+        this.saldo += valor;
+    }
+    public void sacar(float valor) {
+        if (this.saldo >= valor) {
+            this.saldo -= valor;
+        }
+        else {
+            System.out.println("Saldo insuficiente");
+        }
+    }
 }
