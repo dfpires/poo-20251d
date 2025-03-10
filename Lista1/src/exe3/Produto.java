@@ -26,4 +26,22 @@ public class Produto {
             System.out.println("Estoque insuficiente");
         }
     }
+    public void subir(float x){
+        this.preco += x;
+        System.out.println("Preço subiu");
+    }
+    public void descer(float x){
+        if (this.preco >= x){
+            this.preco -= x;
+            System.out.println("Preço caiu");
+        }
+        else {
+            System.out.println("Preço negativo");
+        }
+    }
+    public String mostra(){
+        return "Id: " + this.id + "\nQtde: " + this.qtde +
+                "\nDescrição: " + this.descricao +
+                "\nPreço: " + this.preco;
+    }
 }
