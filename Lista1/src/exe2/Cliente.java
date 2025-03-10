@@ -1,4 +1,7 @@
 package exe2;
+
+import javax.swing.*;
+
 public class Cliente {
     public int nroAgencia, nroConta;
     public String nome;
@@ -21,7 +24,14 @@ public class Cliente {
             this.saldo -= valor;
         }
         else {
-            System.out.println("Saldo insuficiente");
+            JOptionPane.showMessageDialog(null,
+                    "Saldo insuficiente");
         }
+    }
+    public void exibeDetalhes(){
+        JOptionPane.showMessageDialog(null,
+                "Conta: " + this.nroConta +
+                " Nome: " + this.nome +
+                " Saldo: " + this.saldo);
     }
 }
