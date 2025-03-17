@@ -9,5 +9,10 @@ public class Main {
         System.out.println("Modelo: " + obj1.getModelo());
 
         Carro obj2 = new Carro("Fiat", "Palio", -2022, -30);
+        obj2.acelerar(70);
+        obj2.frear(20);
+        obj2.acelerar(120);
+        System.out.println("Modelo: " + obj2.exibeDetalhes());
+
     }
 }
