@@ -3,6 +3,19 @@ public class Cliente {
     private String nroAgencia, nroConta, nome;
     private float saldo;
 
+    public Cliente() {
+        this.nroAgencia = "1234-5";
+        this.nroConta = "123456-7";
+        this.nome = "sem nome";
+    }
+
+    public Cliente(String nroAgencia, String nroConta, String nome, float saldo) {
+        this.setNroAgencia(nroAgencia);
+        this.setNroConta(nroConta);
+        this.setNome(nome);
+        this.setSaldo(saldo);
+    }
+
     public void setNroAgencia(String nroAgencia) {
         // métodos de instância
         if (nroAgencia.length() == 6) {
@@ -32,5 +45,38 @@ public class Cliente {
             this.saldo = saldo;
         }
         else System.out.println("Saldo não pode ser negativo");
+    }
+
+    public String getNroAgencia() {
+        return nroAgencia;
+    }
+
+    public String getNroConta() {
+        return nroConta;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public float getSaldo() {
+        return saldo;
+    }
+    // depósito de x valores
+    public void depositar(float valor) {
+        this.setSaldo(this.saldo + valor);
+    }
+    // saque de x valores
+    public void sacar(float valor){
+        this.setSaldo(this.saldo - valor);
+    }
+
+    public String exibirCliente() {
+        return "Cliente{" +
+                "nroAgencia='" + nroAgencia + '\'' +
+                ", nroConta='" + nroConta + '\'' +
+                ", nome='" + nome + '\'' +
+                ", saldo=" + saldo +
+                '}';
     }
 }
