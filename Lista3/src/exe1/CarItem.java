@@ -37,14 +37,15 @@ public class CarItem {
     }
 
     public void setProduct(Product product) {
+
         this.product = product;
     }
 
-    public String showCarItem() {
-        return "CarItem{" +
+    public String toString() {
+        return "\nCarItem{" +
                 "id=" + id +
                 ", quantity=" + quantity +
-                ", product=" + product.showProduct() +
+                ", product=" + product +
                 '}';
     }
 }

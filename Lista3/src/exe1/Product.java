@@ -38,7 +38,7 @@ public class Product {
         this.price = price;
     }
 
-    public String showProduct() {
+    public String toString() {
         return "Product{" +
                 "id=" + id +
                 ", description='" + description + '\'' +
