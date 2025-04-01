@@ -1,18 +1,20 @@
 package exe3;
 
-import java.util.Date;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public class Voo {
     private int id;
-    private Date data;
+    private LocalDate data;
     private String origem, destino;
 
     public Voo() {
     }
-
-    public Voo(int id, Date data, String origem, String destino) {
+    public Voo(int id, String data, String origem, String destino) {
         this.id = id;
-        this.data = data;
+        // objeto de formatação de data
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        this.data = LocalDate.parse(data, formatter);
         this.origem = origem;
         this.destino = destino;
     }
@@ -25,11 +27,11 @@ public class Voo {
         this.id = id;
     }
 
-    public Date getData() {
+    public LocalDate getData() {
         return data;
     }
 
-    public void setData(Date data) {
+    public void setData(LocalDate data) {
         this.data = data;
     }
 
