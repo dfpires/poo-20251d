@@ -1,6 +1,6 @@
 package rh;
-
-public class Funcionario {
+// classe abstrata - não pode ser instanciada
+public abstract class Funcionario {
     protected String nome, cpf, endereco;
     protected float salario;
 
@@ -57,7 +57,5 @@ public class Funcionario {
                 ", salario=" + salario +
                 '}';
     }
-    public float calculaSalario(){
-        return this.salario;
-    }
+    public abstract float calculaSalario();
 }
