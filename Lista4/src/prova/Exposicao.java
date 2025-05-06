@@ -30,10 +30,10 @@ public class Exposicao {
         this.obras = obras;
     }
     public void addObra(ObraArte obra){
-        this.obras.add(obra);
+        this.obras.add(obra); // polimorfismo
     }
     public String exibeObras(){
-        return this.obras.toString();
+        return this.obras.toString(); // polimorfismo
     }
     public String resumo(){
         return this.nome + this.obras.size();
