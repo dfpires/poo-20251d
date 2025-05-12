@@ -1,4 +1,4 @@
-package br.edu.fatecfranca.produtobd;
+package br.edu.fatecfranca.produtobd.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
