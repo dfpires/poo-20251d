@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class ProdutoService {
+public class ProdutoService { // aqui tem as regras de negócio
     // objeto representa a classe Produto
     private ProdutoRepository repo;
 
