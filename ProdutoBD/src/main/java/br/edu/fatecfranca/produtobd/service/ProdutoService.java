@@ -31,6 +31,10 @@ public class ProdutoService { // aqui tem as regras de negócio
         Categoria categoria =
        categoriaRepo.findById(produto.getCategoria().getId()).orElse(null);
         // define a categoria do produto
+        if (categoria == null){
+            return null;
+        }
+        // categoria existe
         produto.setCategoria(categoria);
         return repo.save(produto); // produto sem id, vai inserir
     }

@@ -5,6 +5,7 @@ import br.edu.fatecfranca.produtobd.service.CategoriaService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/categoria")
@@ -24,4 +25,16 @@ public class CategoriaController {
         return categoriaService.salvaCategoria(categoria);
     }
 
+    @DeleteMapping("/{id}")
+    public String removeCategoria(@PathVariable Long id){
+        return categoriaService.removeCategoria(id) ?
+                "Remoção com sucesso" : "Categoria não encontrada";
+    }
+
+    @PutMapping("/{id}")
+    public Optional<Categoria> atualizaCategoria(@PathVariable Long id,
+                                                 @RequestBody Categoria categoria){
+
+        return categoriaService.atualizaCategoria(id, categoria);
+    }
 }
